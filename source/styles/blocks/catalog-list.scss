@@ -1,0 +1,30 @@
+.catalog-list {
+  margin: 0;
+  list-style-type: none;
+  color: $color-primary;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36.4px;
+  border-top: 1px solid #dbdce0;
+}
+
+@media (max-width: $tablet-width-only) {
+  .catalog-list {
+    padding: 56px 10px 10px 0;
+    //display: none;
+
+    .nav--closed & {
+      display: none;
+    }
+  }
+
+  .catalog-list__item {
+    margin-bottom: 18px;
+  }
+}
+
+.catalog-list__link {
+  display: inline-block;
+  color: inherit;
+}

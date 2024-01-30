@@ -1,0 +1,15 @@
+.toggle {
+  width: 22px;
+  height: 11px;
+  position: relative;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  display: none;
+}
+
+@media (max-width: $tablet-width-only) {
+  .toggle {
+    display: inherit;
+  }
+}

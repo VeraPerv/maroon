@@ -1,0 +1,41 @@
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 18px;
+}
+
+.nav-list__link {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  &--user {
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      mask-image: url("../../images/icons/stack.svg#user-icon");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $color-primary;
+    }
+  }
+
+  &--cart {
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      mask-image: url("../../images/icons/stack.svg#cart-icon");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $color-primary;
+    }
+  }
+}
+

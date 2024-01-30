@@ -1,1 +1,30 @@
 /* здесь подключите шрифты */
+@font-face {
+  font-family: "Raleway";
+  src:
+    url("../../fonts/raleway-500.woff2") format("woff2"),
+    url("../../fonts/raleway-500.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mplus1p";
+  src:
+    url("../../fonts/mplus1p-400.woff2") format("woff2"),
+    url("../../fonts/mplus1p-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mplus1p";
+  src:
+    url("../../fonts/mplus1p-500.woff2") format("woff2"),
+    url("../../fonts/mplus1p-500.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
