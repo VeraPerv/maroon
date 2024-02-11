@@ -13,3 +13,14 @@
     display: inherit;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .toggle {
+    width: 24px;
+    height: 12px;
+
+    &::before {
+      width: 24px;
+    }
+  }
+}

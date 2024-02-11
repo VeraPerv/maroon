@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 18px;
+  row-gap: 10px;
 }
 
 .nav-list__link {
@@ -39,3 +40,24 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .nav-list {
+    column-gap: 22px;
+    justify-content: flex-end;
+  }
+
+  .nav-list__link {
+    width: 21px;
+    height: 21px;
+
+    &--user::before {
+      width: 16px;
+      height: 21px;
+    }
+
+    &--cart::before {
+      width: 18px;
+      height: 21px;
+    }
+  }
+}

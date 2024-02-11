@@ -1,5 +1,18 @@
 .logo {
   display: block;
   text-align: center;
-  padding-bottom: 22px;
+  padding-bottom: 7px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__image {
+    width: 131px;
+    height: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    text-align: left;
+  }
 }

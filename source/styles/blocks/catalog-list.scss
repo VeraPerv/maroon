@@ -1,17 +1,48 @@
 .catalog-list {
   margin: 0;
   list-style-type: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: -25px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: -25px;
+  }
+}
+
+.catalog-list__item {
   color: $color-primary;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 36.4px;
-  border-top: 1px solid #dbdce0;
+}
+
+.catalog-list__link {
+  display: inline-block;
+  color: inherit;
+  padding: 0 10px;
 }
 
 @media (max-width: $tablet-width-only) {
   .catalog-list {
-    padding: 56px 10px 10px 0;
+    padding: 35px 10px 10px 0;
     //display: none;
 
     .nav--closed & {
@@ -24,7 +55,31 @@
   }
 }
 
-.catalog-list__link {
-  display: inline-block;
-  color: inherit;
+@media (min-width: $tablet-width) {
+  .catalog-list__item {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    column-gap: 14px;
+    max-width: 500px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog-list__item {
+    font-family: "mplus1p", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
 }

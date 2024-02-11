@@ -5,53 +5,48 @@
   padding: 31px 15px 15px;
   display: grid;
   grid-template-columns: 50px 1fr 50px;
+  overflow: hidden;
 }
 
 @media (max-width: $tablet-width-only) {
   .nav {
-   /* position: absolute;
-    left: calc(50% - 42px);
-    top: 27px;*/
-
-    &--closed .toggle {
-      &::before {
-        content: "";
-        display: block;
-        width: 22px;
-        height: 2px;
-        background-color: $color-primary;
-        box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+    &--closed .toggle::before {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: $color-primary;
+      box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    &--opened .toggle {
-      &::before {
-        content: "";
-        display: block;
-        width: 14px;
-        height: 2px;
-        position: absolute;
-        background-color: $color-primary;
-        top: 0;
-        left: 0;
-        transform: rotate(45deg);
-      }
 
-      &::after {
-        content: "";
-        display: block;
-        width: 14px;
-        height: 2px;
-        position: absolute;
-        background-color: $color-primary;
-        top: 0;
-        left: 0;
-        transform: rotate(-45deg);
-      }
+    &--opened .toggle::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 2px;
+      position: absolute;
+      background-color: $color-primary;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
     }
+
+    &--opened .toggle::after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 2px;
+      position: absolute;
+      background-color: $color-primary;
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
 
     &--opened .catalog-list {
       display: block;
@@ -59,46 +54,61 @@
       top: 100%;
       left: 0;
       width: 100%;
-     
+      border-top: 1px solid #dbdce0;
+      padding: 34px 10px 10px 14px;
+      background-color: #f8f8f6;
+      box-shadow: 0 4px 30px 0 rgba(214, 214, 214, 0.19);
+
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
+
+    .nav__catalog {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+    }
+
+    .nav__list {
+      grid-column: 3/4;
+    }
+
+    .nav__logo {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav {
+    padding: 39px 42px 15px;
+    grid-template-columns: 180px 1fr 180px;
+
+
+    &--closed .toggle {
+      &::before {
+        width: 24px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav {
+    padding: 39px 0 15px 0;
+    grid-template-columns: 564px 1fr 103px;
+    max-width: 1169px;
+  }
+
+  .nav__logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 
   .nav__catalog {
-    grid-row: 2/3;
-    grid-column: 1/-1;
+    grid-column: 2/3;
   }
-}
-
-
-.nav__list {
-  grid-column: 3/4;
-}
-
-.nav__logo {
-  margin: 0 auto;
- /* position: absolute;
-    top: 28px;
-    left: calc(50% - 42px);
-
-  &::before {
-    content: "";
-    width: 100vw;
-    height: 1px;
-    background-color: #dbdce0;
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  &::after {
-    content: "";
-    width: 100vw;
-    height: 1px;
-    background-color: #dbdce0;
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-  }*/
 }

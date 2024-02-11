@@ -1,0 +1,50 @@
+.promo-card {
+  display: block;
+  width: 100%;
+}
+
+.promo-card__img {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.promo-card__link {
+  text-decoration: none;
+  color: inherit;
+  font-family: "mplus1p", "Arial", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 11px;
+    background-image: url("../../images/icons/stack.svg#promo-arrow");
+    background-position: center;
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo-card__link {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-card__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .promo-card__link {
+    column-gap: 185px;
+  }
+}

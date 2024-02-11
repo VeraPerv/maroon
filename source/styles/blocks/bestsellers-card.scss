@@ -1,0 +1,56 @@
+.bestsellers-card {
+  display: grid;
+}
+
+.bestsellers-card__img {
+  display: block;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.bestsellers-card__heading {
+  @include text;
+  text-align: center;
+  max-width: 150px;
+  margin: 0 auto;
+  font-family: "Raleway","Arial",sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 145%;
+  color: #122947;
+}
+
+.bestsellers-card__desc {
+  @include text;
+  text-align: center;
+  max-width: 150px;
+  margin: 0 auto 3px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 145%;
+  color: #9a9da0;
+}
+
+.bestsellers-card__link {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 145%;
+  color: #122947;
+  border-bottom: 1px solid #122947;
+}
+
+.bestsellers-card__img-wrapper {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.bestsellers-card__wrapper-text {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-top: 210px;
+}

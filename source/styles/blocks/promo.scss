@@ -1,0 +1,120 @@
+.promo {
+  padding-top: 111px;
+  background-image: url("../../images/promo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 546px;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/promo-mobile@2x.jpg");
+  }
+}
+
+.promo__text {
+  margin: 0 0 24px 0;
+  text-align: center;
+  font-family: "mplus1p", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  padding: 0 15px;
+}
+
+.promo__caption {
+  margin-bottom: 18px;
+}
+
+.promo__link {
+  width: 132px;
+  margin: 0 auto 35px;
+}
+
+.promo__card-wrapper {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 130px 130px;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    padding-top: 131px;
+    background-image: url("../../images/promo-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/promo-tablet@2x.jpg");
+    }
+  }
+
+  .promo__wrapper {
+    display: grid;
+    grid-template-columns: 287px 192px 287px;
+    justify-content: center;
+  }
+
+  .promo__caption {
+    margin-bottom: 33px;
+  }
+
+  .promo__text-wrapper {
+    padding-top: 37px;
+    grid-row: 1/2;
+    z-index: 2;
+    grid-column: 1/-1;
+    margin: 0 auto;
+  }
+
+  .promo__text {
+    font-size: 18px;
+    line-height: 26.1px;
+    width: 279px;
+    padding: 0;
+    margin-bottom: 31px;
+  }
+
+  .promo__card-wrapper {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    grid-template-columns: 246px 246px;
+    column-gap: 187px;
+    padding: 0 45px;
+  }
+
+  .promo__link {
+    width: 141px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    background-image: url("../../images/promo-desktop@1x.jpg");
+    padding-top: 116px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/promo-desktop@2x.jpg");
+    }
+  }
+
+  .promo__wrapper {
+    grid-template-columns: 330px 372px 330px;
+  }
+
+  .promo__card-wrapper {
+    grid-template-columns: 330px 330px;
+    column-gap: 370px;
+    padding: unset;
+    align-items: start;
+  }
+
+  .promo__text-wrapper {
+    padding-top: 69px;
+  }
+
+  .promo__text {
+    width: 294px;
+  }
+}
