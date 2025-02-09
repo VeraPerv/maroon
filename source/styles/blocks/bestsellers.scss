@@ -1,9 +1,10 @@
 .bestsellers {
-  padding: 0 0 0 50px;
+  //padding: 0 0 0 50px;
 }
 
 .bestsellers__list {
   @include list;
+  margin-left: 49px;
   margin-bottom: 39px;
 }
 
@@ -11,7 +12,8 @@
   @include text;
   width: 217px;
   text-align: center;
-  margin-bottom: 12px;
+  font-family: $second-font-family;
+  margin: 0 auto 12px;
 }
 
 .bestsellers__text {
@@ -19,7 +21,7 @@
   width: 219px;
   text-align: center;
   font-size: 16px;
-  margin-bottom: 44px;
+  margin: 0 auto 44px;
 }
 
 .bestsellers__slider-button {
@@ -27,29 +29,85 @@
 }
 
 .bestsellers__link {
-  width: 159px;
+  width: 150px;
 }
 
 @media (min-width: $tablet-width) {
   .bestsellers {
     display: grid;
-    grid-template-columns: 214px 500px;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 244px 500px;
+    grid-template-rows: minmax(89px, auto) minmax(93px, auto) auto;
+    row-gap: 16px;
     align-items: start;
+    padding: 0 45px 120px;
+    column-gap: 10px;
   }
 
   .bestsellers__caption {
     grid-column: 1/2;
     grid-row: 1/2;
+    margin: unset;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    align-self: end;
+    width: unset;
+    text-align: left;
   }
 
   .bestsellers__text {
     grid-column: 1/2;
+    margin: 0;
+    width: unset;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .bestsellers__link {
+    width: 155px;
+  }
+
+  .bestsellers__list {
+    margin: 0;
+    margin-bottom: 24px;
   }
 
   .bestsellers__slider-wrapper {
     grid-row: 1/-1;
   }
+
+  .bestsellers__slider-button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    display: block;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 14px;
+      mask-image: url("../../images/icons/stack.svg#promo-arrow");
+      background-color: $color-primary;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  .bestsellers__buttons-wrapper {
+    width: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    justify-self: right;
+    margin-right: 71px;
+  }
+
+  .button-prev {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
 }
-
-

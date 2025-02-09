@@ -1,3 +1,9 @@
 .main__promo {
   margin-bottom: 73px;
 }
+
+@media (min-width: $tablet-width) {
+  .main__promo {
+    margin-bottom: 124px;
+  }
+}
