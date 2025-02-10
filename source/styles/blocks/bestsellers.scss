@@ -30,17 +30,24 @@
 
 .bestsellers__link {
   width: 150px;
+  justify-self: center;
 }
+
 
 @media (min-width: $tablet-width) {
   .bestsellers {
     display: grid;
     grid-template-columns: 244px 500px;
+
     grid-template-rows: minmax(89px, auto) minmax(93px, auto) auto;
     row-gap: 16px;
     align-items: start;
     padding: 0 45px 120px;
     column-gap: 10px;
+
+    max-width: 768px;
+    margin: 0 auto;
+    overflow: hidden; //ПРОВЕРЬ , МОЖЕТ НЕ НАДО
   }
 
   .bestsellers__caption {
@@ -109,5 +116,13 @@
     &::before {
       transform: rotate(180deg);
     }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .bestsellers {
+    grid-template-columns: 244px 1010px;
+    max-width: 1366px;
   }
 }

@@ -1,5 +1,14 @@
 .bestsellers-card {
   display: grid;
+  grid-template-rows: 210px minmax(87px, auto);
+
+  &:nth-child(odd) {
+    background-color: #ebeae8;
+  }
+
+  &:nth-child(even) {
+    background-color: #f3f3f3;
+  }
 }
 
 .bestsellers-card__img {
@@ -50,14 +59,14 @@
 }
 
 .bestsellers-card__wrapper-text {
-  grid-row: 1/2;
+  //grid-row: 1/2;
   grid-column: 1/2;
-  margin-top: 210px;
+  //margin-top: 210px;
 }
 
 @media (min-width: $tablet-width) {
   .bestsellers-card__wrapper-text {
-    margin-top: 215px;
+    //margin-top: 215px;
   }
 
   .bestsellers-card__desc {
