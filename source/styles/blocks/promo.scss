@@ -92,7 +92,9 @@
 @media (min-width: $desktop-width) {
   .promo {
     background-image: url("../../images/promo-desktop@1x.jpg");
-    padding-top: 116px;
+    padding-top: 131px;
+    padding-bottom: 70px;
+    min-height: 650px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../images/promo-desktop@2x.jpg");
@@ -116,5 +118,10 @@
 
   .promo__text {
     width: 294px;
+    //margin-bottom: 37px;
+  }
+
+  .promo__caption {
+    margin-bottom: 35px;
   }
 }

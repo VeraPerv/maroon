@@ -74,11 +74,12 @@
 
   .bestsellers__link {
     width: 155px;
+    justify-self: unset;
   }
 
   .bestsellers__list {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 34px;
   }
 
   .bestsellers__slider-wrapper {
@@ -122,7 +123,27 @@
 
 @media (min-width: $desktop-width) {
   .bestsellers {
-    grid-template-columns: 244px 1010px;
+    padding-left: 97px;
+    padding-right: 97px;
+    grid-template-columns: 261px 1010px;
     max-width: 1366px;
+    column-gap: 40px;
+  }
+
+  .bestsellers__caption {
+    //text-align: left;
+  }
+
+  .bestsellers__text {
+    //text-align: left;
+    width: 246px;
+  }
+
+  .bestsellers__list {
+    margin-bottom: 25px;
+  }
+
+  .bestsellers__buttons-wrapper {
+    margin-right: 135px; /*подумать оптимальность*/
   }
 }

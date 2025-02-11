@@ -7,3 +7,9 @@
     margin-bottom: 124px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main__promo {
+    margin-bottom: 134px;
+  }
+}

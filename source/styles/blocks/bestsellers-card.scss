@@ -65,11 +65,17 @@
 }
 
 @media (min-width: $tablet-width) {
-  .bestsellers-card__wrapper-text {
-    //margin-top: 215px;
+  .bestsellers-card {
+    grid-template-rows: 215px minmax(87px, auto);
   }
 
   .bestsellers-card__desc {
     margin-bottom: 9px;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .bestsellers-card {
+    grid-template-rows: 215px minmax(96px, auto);
+    }
 }
